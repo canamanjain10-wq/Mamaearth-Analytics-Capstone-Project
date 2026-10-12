@@ -1,0 +1,66 @@
+[source=offline | accuracy=5/5]
+
+========================================================================
+BEAUTY & PERSONAL CARE E-COMMERCE – EXECUTIVE NARRATIVE
+(Offline fallback – no Gemini API key detected)
+Generated : 2026-10-12 12:52
+Data window: 2026-01 to 2026-06
+========================================================================
+
+1. DATA QUALITY
+------------------------------------------------------------------------
+We started with 180 raw order rows. Five double-submitted
+orders (O0176, O0177, O0178, O0179, O0180) were identified on the
+natural key and removed, leaving 175 clean orders.
+Missing discount percentages were set to 0 and missing ratings were
+imputed with the median value of 3.0. Two
+quantity outliers (bulk purchases of 25 and 30 units) were flagged for
+transparency but retained in the analytical set.
+
+2. REVENUE SNAPSHOT
+------------------------------------------------------------------------
+Cleaned total revenue stands at ₹97,358.30
+(average order value ₹556.33).
+The Part-1 SQL total computed on the raw 180 rows was
+₹99,860.20; the difference of
+₹2,501.90
+is exactly the revenue of the five dropped duplicate rows.
+
+3. RETURNS & RISK SEGMENTS
+------------------------------------------------------------------------
+Overall return rate is 25.14%.
+Payment-method return rates:
+  • COD  : 44.44%
+  • UPI  : 18.87%
+  • Card : 14.71%
+
+Hypothesis test – “COD orders return more often”:
+Verdict: SUPPORTED
+Reason : COD return rate (44.44%) is materially higher than Card (14.71%) and UPI (18.87%).
+
+Highest-risk multi-level segment: COD + Tier-2 (54.55%).
+This segment should be prioritised for fulfilment-quality audits and
+perhaps a soft COD limit or pre-delivery confirmation.
+
+4. CATEGORY & MONTHLY INSIGHTS
+------------------------------------------------------------------------
+Haircare remains the revenue engine. After removing the two quantity
+outliers, the true peak revenue month is 2026-03
+(₹20,318.90). January’s apparent spike was an
+artefact of the bulk orders; the underlying demand peak sits in March.
+
+Top spender: Reyansh (C043) at ₹12,920.
+
+5. RECOMMENDED ACTIONS
+------------------------------------------------------------------------
+1. Investigate the elevated Skincare return rate and the COD + Tier-2
+   segment (54.55 % returns).
+2. Protect Haircare margin – it drives the largest share of revenue.
+3. Introduce a soft quantity check (>10 units) to catch accidental or
+   test bulk orders earlier.
+4. Re-engage the single zero-order customer identified in the SQL layer.
+5. Monitor April’s trough for possible stock or campaign gaps.
+
+========================================================================
+End of narrative (offline fallback)
+========================================================================

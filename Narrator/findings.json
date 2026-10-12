@@ -1,0 +1,175 @@
+{
+  "project": "Beauty & Personal Care E-commerce Capstone",
+  "data_period": "2026-01 to 2026-06",
+  "raw_orders": 180,
+  "cleaned_orders": 175,
+  "dropped_duplicates": [
+    "O0176",
+    "O0177",
+    "O0178",
+    "O0179",
+    "O0180"
+  ],
+  "total_revenue_raw_sql": 99860.2,
+  "total_revenue_cleaned": 97358.3,
+  "avg_order_value_cleaned": 556.33,
+  "overall_return_rate_pct": 25.14,
+  "median_rating_imputed": 3.0,
+  "quantity_outliers": [
+    {
+      "order_id": "O0011",
+      "customer_id": "C026",
+      "quantity": 25,
+      "order_value": 7475.0
+    },
+    {
+      "order_id": "O0098",
+      "customer_id": "C043",
+      "quantity": 30,
+      "order_value": 10470.0
+    }
+  ],
+  "payment_method_return_rates": {
+    "COD": 44.44,
+    "UPI": 18.87,
+    "Card": 14.71
+  },
+  "cod_hypothesis_verdict": "SUPPORTED",
+  "cod_hypothesis_reason": "COD return rate (44.44%) is materially higher than Card (14.71%) and UPI (18.87%).",
+  "highest_risk_segment": "COD + Tier-2 (54.55%)",
+  "correlation_pairs": [
+    {
+      "pair": "quantity \u2194 discount_pct",
+      "r": -0.17,
+      "strength": "weak"
+    },
+    {
+      "pair": "quantity \u2194 rating",
+      "r": -0.098,
+      "strength": "negligible"
+    },
+    {
+      "pair": "quantity \u2194 returned",
+      "r": 0.041,
+      "strength": "negligible"
+    },
+    {
+      "pair": "quantity \u2194 order_value",
+      "r": 0.976,
+      "strength": "strong"
+    },
+    {
+      "pair": "quantity \u2194 price",
+      "r": -0.018,
+      "strength": "negligible"
+    },
+    {
+      "pair": "discount_pct \u2194 rating",
+      "r": 0.043,
+      "strength": "negligible"
+    },
+    {
+      "pair": "discount_pct \u2194 returned",
+      "r": -0.088,
+      "strength": "negligible"
+    },
+    {
+      "pair": "discount_pct \u2194 order_value",
+      "r": -0.213,
+      "strength": "weak"
+    },
+    {
+      "pair": "discount_pct \u2194 price",
+      "r": 0.107,
+      "strength": "weak"
+    },
+    {
+      "pair": "rating \u2194 returned",
+      "r": -0.101,
+      "strength": "weak"
+    },
+    {
+      "pair": "rating \u2194 order_value",
+      "r": -0.092,
+      "strength": "negligible"
+    },
+    {
+      "pair": "rating \u2194 price",
+      "r": 0.075,
+      "strength": "negligible"
+    },
+    {
+      "pair": "returned \u2194 order_value",
+      "r": 0.053,
+      "strength": "negligible"
+    },
+    {
+      "pair": "returned \u2194 price",
+      "r": 0.072,
+      "strength": "negligible"
+    },
+    {
+      "pair": "order_value \u2194 price",
+      "r": 0.158,
+      "strength": "weak"
+    }
+  ],
+  "monthly_revenue_with_outliers": {
+    "2026-01": 29582.1,
+    "2026-02": 13195.5,
+    "2026-03": 20318.9,
+    "2026-04": 9495.3,
+    "2026-05": 13151.1,
+    "2026-06": 11615.4
+  },
+  "monthly_revenue_without_outliers": {
+    "2026-01": 11637.1,
+    "2026-02": 13195.5,
+    "2026-03": 20318.9,
+    "2026-04": 9495.3,
+    "2026-05": 13151.1,
+    "2026-06": 11615.4
+  },
+  "true_peak_month": "2026-03",
+  "true_peak_revenue": 20318.9,
+  "category_revenue": {
+    "Babycare": 16535.9,
+    "Haircare": 43698.2,
+    "PersonalCare": 10190.4,
+    "Skincare": 26933.8
+  },
+  "top_customers_by_spend": [
+    {
+      "customer_id": "C043",
+      "name": "Reyansh",
+      "spend": 12920.0
+    },
+    {
+      "customer_id": "C026",
+      "name": "Isha",
+      "spend": 8371.6
+    },
+    {
+      "customer_id": "C008",
+      "name": "Meera",
+      "spend": 4152.4
+    },
+    {
+      "customer_id": "C011",
+      "name": "Arjun",
+      "spend": 4111.0
+    },
+    {
+      "customer_id": "C042",
+      "name": "Sanya",
+      "spend": 3785.0
+    }
+  ],
+  "key_figures_for_accuracy_check": {
+    "cleaned_orders": 175,
+    "total_revenue_cleaned": 97358.3,
+    "overall_return_rate_pct": 25.14,
+    "true_peak_month": "2026-03",
+    "highest_risk_segment_rate": 54.55
+  }
+}
