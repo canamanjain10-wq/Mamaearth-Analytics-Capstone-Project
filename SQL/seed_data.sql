@@ -1,0 +1,17 @@
+-- seed_data.sql
+-- Entry-point documentation for loading the three CSVs.
+--
+-- Recommended (robust) path – uses the Python loader:
+--
+--   sqlite3 beauty.db < sql/schema.sql
+--   python3 sql/load_seed.py
+--
+-- The Python loader:
+--   • converts blank CSV cells to NULL (never empty strings)
+--   • is fully re-runnable (DELETE + INSERT)
+--   • verifies final row counts: 45 / 16 / 180
+--   • prints a quick NULL summary for discount_pct and rating
+--
+-- After seeding you can immediately run the nine business reports:
+--
+--   sqlite3 -header -column beauty.db < sql/reports.sql
